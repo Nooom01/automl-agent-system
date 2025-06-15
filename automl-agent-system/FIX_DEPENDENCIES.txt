@@ -1,0 +1,49 @@
+FIXING THE "VITE IS NOT RECOGNIZED" ERROR
+========================================
+
+The error means the project dependencies aren't properly installed.
+
+SOLUTION - Run these commands in order:
+=====================================
+
+1. Open Command Prompt in the project folder (like you just did)
+
+2. First, clean any existing installation:
+   npm cache clean --force
+
+3. Delete node_modules folder (if it exists):
+   rmdir /s node_modules
+
+4. Install all dependencies fresh:
+   npm install
+
+5. Now try starting the server:
+   npm run dev
+
+STEP BY STEP COMMANDS:
+=====================
+Copy and paste these one by one:
+
+npm cache clean --force
+rmdir /s node_modules
+npm install
+npm run dev
+
+WHAT THIS DOES:
+==============
+- Cleans npm cache
+- Removes old node_modules
+- Reinstalls all dependencies (including vite)
+- Starts the development server
+
+After "npm install" completes, you should see a node_modules folder
+with thousands of files. Then "npm run dev" will work.
+
+IF YOU STILL GET ERRORS:
+=======================
+Check if Node.js is properly installed:
+- Type: node --version
+- Type: npm --version
+
+If those don't work, download and install Node.js from:
+https://nodejs.org/ (choose LTS version)
